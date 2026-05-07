@@ -28,6 +28,15 @@ export default function Footer() {
           <h4 className="text-sm font-medium text-stone-900 mb-3">{t('footer.contact')}</h4>
           <div className="flex flex-col gap-2 text-sm text-stone-500">
             <span>shaokai2011@gmail.com</span>
+            <a
+              href="https://tiktok.com/@shaokai2011"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-stone-900 transition-colors"
+            >
+              <Image src="/images/tiktok-qr.jpg" alt="TikTok" width={20} height={20} className="rounded" />
+              @shaokai2011
+            </a>
           </div>
         </div>
       </div>
