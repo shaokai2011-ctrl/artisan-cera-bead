@@ -9,11 +9,21 @@
     "description": "Handcrafted ceramic beads in celestial blue, featuring a subtle starry glaze pattern. Each bead is individually shaped and fired.",
     "descriptionZh": "手工制作的天空蓝陶瓷珠串，带有微妙的星彩釉面图案。每颗珠子都是独立塑形烧制而成。",
     "descriptionJa": "星空を思わせる釉薬模様が特徴の、セレスティアルブルーの手作り陶瓷珠。一粒一粒を丁寧に成形・焼成しています。",
-    "images": ["/images/celestial-blue-1.jpg", "/images/celestial-blue-2.jpg", "/images/celestial-blue-3.jpg", "/images/celestial-blue-4.jpg"],
-    "materials": ["Ceramic", "Elastic cord", "Sterling silver accent"],
+    "images": [
+      "/images/celestial-blue-1.jpg",
+      "/images/celestial-blue-2.jpg",
+      "/images/celestial-blue-3.jpg",
+      "/images/celestial-blue-4.jpg"
+    ],
+    "materials": [
+      "Ceramic",
+      "Elastic cord",
+      "Sterling silver accent"
+    ],
     "length": "7.5 inches (19cm)",
     "stock": 10,
-    "featured": true
+    "featured": true,
+    "active": true
   },
   {
     "id": "earthy-terracotta-bracelet",
@@ -25,11 +35,20 @@
     "description": "Warm terracotta tones with a matte finish. Inspired by natural clay and earth elements.",
     "descriptionZh": "温暖的赤陶色调，哑光质感。灵感来源于天然粘土和大地元素。",
     "descriptionJa": "マットな質感の温かみのあるテラコッタトーン。自然の粘土と大地の要素に着想を得ています。",
-    "images": ["/images/earthy-terracotta-1.jpg", "/images/earthy-terracotta-2.jpg", "/images/earthy-terracotta-3.jpg"],
-    "materials": ["Terracotta ceramic", "Waxed cotton cord", "Wooden bead accent"],
+    "images": [
+      "/images/earthy-terracotta-1.jpg",
+      "/images/earthy-terracotta-2.jpg",
+      "/images/earthy-terracotta-3.jpg"
+    ],
+    "materials": [
+      "Terracotta ceramic",
+      "Waxed cotton cord",
+      "Wooden bead accent"
+    ],
     "length": "7.5 inches (19cm)",
     "stock": 15,
-    "featured": true
+    "featured": true,
+    "active": true
   },
   {
     "id": "jade-whisper-bracelet",
@@ -41,11 +60,20 @@
     "description": "Translucent jade-green ceramic beads with a glossy finish. A minimalist design that brings a touch of elegance.",
     "descriptionZh": "半透明的翠绿色陶瓷珠，光泽釉面。极简设计，带来一抹优雅。",
     "descriptionJa": "半透明の翡翠グリーン陶瓷珠、光沢仕上げ。エレガントさを添えるミニマルデザイン。",
-    "images": ["/images/jade-whisper-1.jpg", "/images/jade-whisper-2.jpg", "/images/jade-whisper-3.jpg"],
-    "materials": ["Jade-glazed ceramic", "Silk cord", "14k gold-plated charm"],
+    "images": [
+      "/images/jade-whisper-1.jpg",
+      "/images/jade-whisper-2.jpg",
+      "/images/jade-whisper-3.jpg"
+    ],
+    "materials": [
+      "Jade-glazed ceramic",
+      "Silk cord",
+      "14k gold-plated charm"
+    ],
     "length": "7 inches (18cm)",
     "stock": 8,
-    "featured": true
+    "featured": true,
+    "active": true
   },
   {
     "id": "midnight-galaxy-bracelet",
@@ -57,11 +85,20 @@
     "description": "Deep navy ceramic beads infused with metallic flecks that catch the light like stars in the night sky.",
     "descriptionZh": "深蓝色陶瓷珠融入金属微粒，在光线下如夜空中的繁星闪烁。",
     "descriptionJa": "深紺色の陶瓷珠に金属粒子を混ぜ込み、夜空の星のように光を捉えます。",
-    "images": ["/images/midnight-galaxy-1.jpg", "/images/midnight-galaxy-2.jpg", "/images/midnight-galaxy-3.jpg"],
-    "materials": ["Glazed ceramic", "Stainless steel wire", "Magnetic clasp"],
+    "images": [
+      "/images/midnight-galaxy-1.jpg",
+      "/images/midnight-galaxy-2.jpg",
+      "/images/midnight-galaxy-3.jpg"
+    ],
+    "materials": [
+      "Glazed ceramic",
+      "Stainless steel wire",
+      "Magnetic clasp"
+    ],
     "length": "8 inches (20cm)",
     "stock": 12,
-    "featured": false
+    "featured": false,
+    "active": true
   },
   {
     "id": "sunset-blush-bracelet",
@@ -73,11 +110,20 @@
     "description": "A gradient from soft pink to warm orange, capturing the beauty of a sunset in ceramic form.",
     "descriptionZh": "从柔粉到暖橙的渐变色彩，将日落之美定格在陶瓷中。",
     "descriptionJa": "ソフトピンクから温かなオレンジへのグラデーションが、夕焼けの美しさを陶瓷に閉じ込めます。",
-    "images": ["/images/sunset-blush-1.jpg", "/images/sunset-blush-2.jpg", "/images/sunset-blush-3.jpg"],
-    "materials": ["Ceramic", "Elastic cord", "Rose gold bead cap"],
+    "images": [
+      "/images/sunset-blush-1.jpg",
+      "/images/sunset-blush-2.jpg",
+      "/images/sunset-blush-3.jpg"
+    ],
+    "materials": [
+      "Ceramic",
+      "Elastic cord",
+      "Rose gold bead cap"
+    ],
     "length": "7.5 inches (19cm)",
     "stock": 10,
-    "featured": false
+    "featured": false,
+    "active": true
   },
   {
     "id": "ocean-deep-bracelet",
@@ -89,11 +135,20 @@
     "description": "Deep teal and navy ceramic beads with a rippled texture, reminiscent of ocean waves.",
     "descriptionZh": "深蓝绿色陶瓷珠，表面波纹纹理，令人联想到海浪。",
     "descriptionJa": "深いティールとネイビーの陶瓷珠、波紋のようなテクスチャーが海の波を思わせます。",
-    "images": ["/images/ocean-deep-1.jpg", "/images/ocean-deep-2.jpg", "/images/ocean-deep-3.jpg"],
-    "materials": ["Textured ceramic", "Leather cord", "Silver toggle clasp"],
+    "images": [
+      "/images/ocean-deep-1.jpg",
+      "/images/ocean-deep-2.jpg",
+      "/images/ocean-deep-3.jpg"
+    ],
+    "materials": [
+      "Textured ceramic",
+      "Leather cord",
+      "Silver toggle clasp"
+    ],
     "length": "7.5 inches (19cm)",
     "stock": 7,
-    "featured": false
+    "featured": false,
+    "active": true
   },
   {
     "id": "sakura-petal-bracelet",
@@ -105,11 +160,21 @@
     "description": "Delicate pink ceramic beads shaped like cherry blossom petals. A celebration of spring.",
     "descriptionZh": "精致的粉红陶瓷珠，塑造成樱花花瓣形状。对春天的礼赞。",
     "descriptionJa": "桜の花びらの形を模した繊細なピンクの陶瓷珠。春を祝う一品。",
-    "images": ["/images/sakura-petal-1.jpg", "/images/sakura-petal-2.jpg", "/images/sakura-petal-3.jpg", "/images/sakura-petal-4.jpg"],
-    "materials": ["Porcelain", "Pink silk cord", "Gold-filled spacer beads"],
+    "images": [
+      "/images/sakura-petal-1.jpg",
+      "/images/sakura-petal-2.jpg",
+      "/images/sakura-petal-3.jpg",
+      "/images/sakura-petal-4.jpg"
+    ],
+    "materials": [
+      "Porcelain",
+      "Pink silk cord",
+      "Gold-filled spacer beads"
+    ],
     "length": "7 inches (18cm)",
     "stock": 6,
-    "featured": true
+    "featured": true,
+    "active": true
   },
   {
     "id": "monochrome-minimal-bracelet",
@@ -121,10 +186,18 @@
     "description": "Clean black and white geometric ceramic beads. A modern, understated look for everyday wear.",
     "descriptionZh": "简洁的黑白几何陶瓷珠。现代低调，适合日常佩戴。",
     "descriptionJa": "シャープな白黒の幾何学陶瓷珠。モダンで控えめな日常使いに最適なデザイン。",
-    "images": ["/images/monochrome-minimal-1.jpg", "/images/monochrome-minimal-2.jpg"],
-    "materials": ["Black & white ceramic", "Nylon cord", "Stainless steel clasp"],
+    "images": [
+      "/images/monochrome-minimal-1.jpg",
+      "/images/monochrome-minimal-2.jpg"
+    ],
+    "materials": [
+      "Black & white ceramic",
+      "Nylon cord",
+      "Stainless steel clasp"
+    ],
     "length": "7.5 inches (19cm)",
     "stock": 20,
-    "featured": false
+    "featured": false,
+    "active": true
   }
 ]
