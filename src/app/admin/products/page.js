@@ -59,6 +59,9 @@ export default function AdminProductsPage() {
     <div>
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-xl font-serif text-stone-900">商品管理</h1>
+        <a href="/admin/products/new" className="px-4 py-1.5 bg-stone-900 text-white text-sm rounded hover:bg-stone-800">
+          添加商品
+        </a>
       </div>
 
       <div className="overflow-x-auto">
@@ -69,6 +72,7 @@ export default function AdminProductsPage() {
               <th className="pb-3 font-medium">商品</th>
               <th className="pb-3 font-medium">分类</th>
               <th className="pb-3 font-medium">价格</th>
+              <th className="pb-3 font-medium">优惠价</th>
               <th className="pb-3 font-medium">库存</th>
               <th className="pb-3 font-medium">销量</th>
               <th className="pb-3 font-medium">状态</th>
@@ -97,6 +101,13 @@ export default function AdminProductsPage() {
                     {cat ? cat.nameZh || cat.name : '—'}
                   </td>
                   <td className="py-3 pr-4 text-stone-700">{formatPrice(p.price)}</td>
+                  <td className="py-3 pr-4">
+                    {p.salePrice > 0 ? (
+                      <span className="text-red-500 font-medium">{formatPrice(p.salePrice)}</span>
+                    ) : (
+                      <span className="text-stone-300">—</span>
+                    )}
+                  </td>
                   <td className="py-3 pr-4 text-stone-700">{p.stock}</td>
                   <td className="py-3 pr-4 text-stone-700">{p.sales || 0}</td>
                   <td className="py-3 pr-4">
@@ -123,13 +134,30 @@ export default function AdminProductsPage() {
                       {p.featured ? '精选' : '普通'}
                     </button>
                   </td>
-                  <td className="py-3">
+                  <td className="py-3 flex gap-2">
                     <a
                       href={`/admin/products/${p.id}`}
                       className="text-xs text-stone-500 hover:text-stone-900 underline"
                     >
                       编辑
                     </a>
+                    <button
+                      onClick={async () => {
+                        if (!confirm('确定删除此商品？删除后不可恢复。')) return
+                        const res = await fetch(`/api/admin/products/${p.id}`, {
+                          method: 'DELETE',
+                          headers: { Authorization: `Bearer ${token}` },
+                        })
+                        if (!res.ok) {
+                          const data = await res.json()
+                          alert(data.error || '删除失败')
+                        }
+                        fetchData()
+                      }}
+                      className="text-xs text-red-400 hover:text-red-600"
+                    >
+                      删除
+                    </button>
                   </td>
                 </tr>
               )

@@ -3,6 +3,7 @@ import { CartProvider } from '@/context/CartContext'
 import { LanguageProvider } from '@/context/LanguageContext'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import VisitTracker from '@/components/VisitTracker'
 import './globals.css'
 
 const geistSans = Geist({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <LanguageProvider>
           <CartProvider>
             <Header />
+            <VisitTracker />
             <main className="flex-1">{children}</main>
             <Footer />
           </CartProvider>

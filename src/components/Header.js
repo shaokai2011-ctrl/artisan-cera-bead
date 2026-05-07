@@ -22,6 +22,7 @@ export default function Header() {
         <div className="flex items-center gap-2 md:gap-6">
           <nav className="hidden md:flex items-center gap-8 text-sm text-stone-600">
             <Link href="/" className="hover:text-stone-900 transition-colors">{t('nav.shop')}</Link>
+            <Link href="/artisans" className="hover:text-stone-900 transition-colors">{t('nav.artisans')}</Link>
             <Link href="/about" className="hover:text-stone-900 transition-colors">{t('nav.about')}</Link>
             <Link href="/cart" className="relative hover:text-stone-900 transition-colors">
               {t('nav.cart')}
@@ -55,6 +56,7 @@ export default function Header() {
       {menuOpen && (
         <div className="md:hidden border-t border-stone-200 bg-white px-4 py-4 flex flex-col gap-4 text-sm text-stone-600">
           <Link href="/" onClick={() => setMenuOpen(false)} className="hover:text-stone-900 py-1">{t('nav.shop')}</Link>
+          <Link href="/artisans" onClick={() => setMenuOpen(false)} className="hover:text-stone-900 py-1">{t('nav.artisans')}</Link>
           <Link href="/about" onClick={() => setMenuOpen(false)} className="hover:text-stone-900 py-1">{t('nav.about')}</Link>
           <Link href="/cart" onClick={() => setMenuOpen(false)} className="hover:text-stone-900 py-1">
             {t('nav.cart')} {totalItems > 0 && `(${totalItems})`}

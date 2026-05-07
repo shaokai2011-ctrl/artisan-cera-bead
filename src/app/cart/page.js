@@ -70,7 +70,11 @@ export default function CartPage() {
                 <Link href={`/products/${item.id}`} className="text-sm font-medium text-stone-900 hover:underline">
                   {item.name}
                 </Link>
-                <p className="text-xs md:text-sm text-stone-500 mt-0.5">{formatPrice(item.price)}</p>
+                <p className="text-xs md:text-sm text-stone-500 mt-0.5">
+                  {item.salePrice > 0 ? (
+                    <><span className="text-red-500 font-medium">{formatPrice(item.salePrice)}</span>{' '}<span className="line-through text-stone-300">{formatPrice(item.price)}</span></>
+                  ) : formatPrice(item.price)}
+                </p>
                 <div className="flex items-center gap-3 mt-2">
                   <select
                     value={item.quantity}
@@ -90,7 +94,7 @@ export default function CartPage() {
                 </div>
               </div>
               <div className="text-xs md:text-sm text-stone-900 font-medium whitespace-nowrap">
-                {formatPrice(item.price * item.quantity)}
+                {formatPrice((item.salePrice > 0 ? item.salePrice : item.price) * item.quantity)}
               </div>
             </div>
           )

@@ -15,6 +15,7 @@ export async function POST(request) {
       if (!product) {
         return Response.json({ error: `Product ${item.id} not found` }, { status: 400 })
       }
+      const unitAmount = product.salePrice > 0 ? product.salePrice : product.price
       lineItems.push({
         price_data: {
           currency: 'usd',
@@ -22,7 +23,7 @@ export async function POST(request) {
             name: product.name,
             description: product.nameZh,
           },
-          unit_amount: product.price,
+          unit_amount: unitAmount,
         },
         quantity: item.quantity,
       })
@@ -37,6 +38,8 @@ export async function POST(request) {
       shipping_address_collection: {
         allowed_countries: ['US', 'CA', 'GB', 'AU', 'DE', 'FR', 'JP', 'SG', 'HK', 'TW', 'CN'],
       },
+      phone_number_collection: { enabled: true },
+      expand: ['line_items', 'payment_intent'],
     })
 
     return Response.json({ url: session.url })

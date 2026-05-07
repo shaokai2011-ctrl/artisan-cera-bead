@@ -45,7 +45,13 @@ export default function ProductCard({ product }) {
         {product.name}
       </h3>
       <p className="text-xs text-stone-500 mt-0.5">{altName}</p>
-      <p className="text-xs md:text-sm text-stone-900 mt-1">{formatPrice(product.price)}</p>
+      <p className="text-xs md:text-sm mt-1">
+        {product.salePrice > 0 ? (
+          <><span className="text-red-500 font-medium">{formatPrice(product.salePrice)}</span>{' '}<span className="line-through text-stone-300">{formatPrice(product.price)}</span></>
+        ) : (
+          <span className="text-stone-900">{formatPrice(product.price)}</span>
+        )}
+      </p>
     </Link>
   )
 }

@@ -30,7 +30,7 @@ export function CartProvider({ children }) {
           i.id === product.id ? { ...i, quantity: i.quantity + quantity } : i
         )
       } else {
-        next = [...prev, { id: product.id, name: product.name, price: product.price, images: product.images, quantity }]
+        next = [...prev, { id: product.id, name: product.name, price: product.price, salePrice: product.salePrice, images: product.images, quantity }]
       }
       localStorage.setItem('artisan-cart', JSON.stringify(next))
       return next
@@ -50,7 +50,7 @@ export function CartProvider({ children }) {
   }, [persist])
 
   const totalItems = items.reduce((sum, i) => sum + i.quantity, 0)
-  const totalPrice = items.reduce((sum, i) => sum + i.price * i.quantity, 0)
+  const totalPrice = items.reduce((sum, i) => sum + (i.salePrice > 0 ? i.salePrice : i.price) * i.quantity, 0)
 
   return (
     <CartContext.Provider value={{ items, addItem, updateQuantity, removeItem, clearCart, totalItems, totalPrice }}>

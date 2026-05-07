@@ -13,6 +13,12 @@ export function AddToCartButton({ product }) {
     addItem(product)
     setAdded(true)
     setTimeout(() => setAdded(false), 1500)
+    // Track add-to-cart event
+    fetch('/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: `/products/${product.id}`, action: 'add_to_cart', productId: product.id }),
+    }).catch(() => {})
   }
 
   return (

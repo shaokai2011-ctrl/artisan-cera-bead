@@ -72,7 +72,13 @@ export default function ProductPage() {
         <div>
           <h1 className="text-2xl md:text-3xl font-serif text-stone-900 mb-1">{product.name}</h1>
           <p className="text-sm md:text-base text-stone-500 mb-3 md:mb-4">{altName}</p>
-          <p className="text-xl md:text-2xl text-stone-900 mb-4 md:mb-6">{formatPrice(product.price)}</p>
+          <p className="text-xl md:text-2xl mb-4 md:mb-6">
+            {product.salePrice > 0 ? (
+              <><span className="text-red-500 font-medium">{formatPrice(product.salePrice)}</span>{' '}<span className="line-through text-stone-300 text-lg">{formatPrice(product.price)}</span></>
+            ) : (
+              <span className="text-stone-900">{formatPrice(product.price)}</span>
+            )}
+          </p>
 
           <p className="text-sm md:text-base text-stone-600 mb-2">{product.description}</p>
           <p className="text-xs md:text-sm text-stone-400 mb-4 md:mb-6">{altDesc}</p>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1778174927851-5w12",
+    "productId": "10000008",
+    "productName": "Monochrome Minimal Bracelet",
+    "quantity": -1,
+    "type": "order_deduct",
+    "orderId": "cs_test_a1esnjvALZj7At8GoVeiHy4TRTbteaDbQKclrRYXlxMNppYDbzpSo5LK8x",
+    "note": "订单 cs_test_a1es... 发货扣减库存",
+    "timestamp": "2026-05-07T17:28:47.851Z"
+  },
+  {
+    "id": "1778174940526-vvf5",
+    "productId": "10000008",
+    "productName": "Monochrome Minimal Bracelet",
+    "quantity": 1,
+    "type": "order_restore",
+    "orderId": "cs_test_a1esnjvALZj7At8GoVeiHy4TRTbteaDbQKclrRYXlxMNppYDbzpSo5LK8x",
+    "note": "订单 cs_test_a1es... 取消归还库存",
+    "timestamp": "2026-05-07T17:29:00.526Z"
+  },
+  {
+    "id": "1778174940573-o8vb",
+    "productId": "10000008",
+    "productName": "Monochrome Minimal Bracelet",
+    "quantity": -1,
+    "type": "order_deduct",
+    "orderId": "cs_test_a1esnjvALZj7At8GoVeiHy4TRTbteaDbQKclrRYXlxMNppYDbzpSo5LK8x",
+    "note": "订单 cs_test_a1es... 发货扣减库存",
+    "timestamp": "2026-05-07T17:29:00.573Z"
+  },
+  {
+    "id": "1778174990340-3p72",
+    "productId": "10000007",
+    "productName": "Sakura Petal Bracelet",
+    "quantity": 2,
+    "type": "manual",
+    "orderId": "",
+    "note": "后台手动调整库存（6 → 8）",
+    "timestamp": "2026-05-07T17:29:50.340Z"
+  },
+  {
+    "id": "1778175138207-sog5",
+    "productId": "10000002",
+    "productName": "Earthy Terracotta Bracelet",
+    "quantity": -1,
+    "type": "order_deduct",
+    "orderId": "cs_test_a1Sbd4nCXGbjjwKQKSImGERJOadfhu2uxwVHhnYvO0eMoBjqFbtonNbyOd",
+    "note": "订单 cs_test_a1Sb... 发货扣减库存",
+    "timestamp": "2026-05-07T17:32:18.207Z"
+  },
+  {
+    "id": "1778175149786-70h3",
+    "productId": "10000002",
+    "productName": "Earthy Terracotta Bracelet",
+    "quantity": 1,
+    "type": "order_restore",
+    "orderId": "cs_test_a1Sbd4nCXGbjjwKQKSImGERJOadfhu2uxwVHhnYvO0eMoBjqFbtonNbyOd",
+    "note": "订单 cs_test_a1Sb... 取消归还库存",
+    "timestamp": "2026-05-07T17:32:29.786Z"
+  }
+]

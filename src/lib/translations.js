@@ -3,6 +3,7 @@ const translations = {
     /* Header */
     'nav.shop': '商品',
     'nav.about': '品牌故事',
+    'nav.artisans': '匠人声音',
     'nav.cart': '购物车',
     'lang.switch': 'EN',
 
@@ -106,6 +107,15 @@ const translations = {
     'about.promise.body':
       '我们不追潮流，不赶季节。每一件作品都必须经过我们自己的品质把关才能交付到你手中。如果一件作品不够好，我们宁愿重做。因为我们相信，你值得拥有最好的。',
 
+    'artisan.title': '匠人声音',
+    'artisan.subtitle': '每一件作品背后，都有一位匠人的故事与温度',
+    'artisan.back': '返回匠人列表',
+    'artisan.empty': '暂无匠人',
+    'artisan.noCover': '暂无封面',
+    'artisan.hasVideo': '▶ 有视频介绍',
+    'artisan.video': '视频介绍',
+    'artisan.products': '关联商品',
+
     'about.contact': '如有任何问题，请联系我们',
   },
 
@@ -113,6 +123,7 @@ const translations = {
     /* Header */
     'nav.shop': 'Shop',
     'nav.about': 'Our Story',
+    'nav.artisans': 'Artisans',
     'nav.cart': 'Cart',
     'lang.switch': '日',
 
@@ -216,6 +227,15 @@ const translations = {
     'about.promise.body':
       'We do not chase trends or seasons. Every piece must pass our own quality check before it reaches you. If it is not good enough, we make it again. Because we believe you deserve the best.',
 
+    'artisan.title': 'Artisan Voices',
+    'artisan.subtitle': 'Behind every piece is an artisan\'s story and warmth',
+    'artisan.back': 'Back to Artisans',
+    'artisan.empty': 'No artisans yet',
+    'artisan.noCover': 'No cover',
+    'artisan.hasVideo': '▶ Video available',
+    'artisan.video': 'Video',
+    'artisan.products': 'Shop the Collection',
+
     'about.contact': 'Questions? Reach out to us at',
   },
 
@@ -223,6 +243,7 @@ const translations = {
     /* Header */
     'nav.shop': '商品',
     'nav.about': 'ブランドストーリー',
+    'nav.artisans': '職人の声',
     'nav.cart': 'カート',
     'lang.switch': '中',
 
@@ -325,6 +346,15 @@ const translations = {
     'about.promise.titleEn': 'Our Promise',
     'about.promise.body':
       '私たちは流行や季節を追いかけません。一品一品が厳格な品質チェックを通過して初めてお客様のもとへ届けられます。もし十分でなければ、作り直します。最高のものをお届けしたいからです。',
+
+    'artisan.title': '職人の声',
+    'artisan.subtitle': '作品の背後には、職人の物語と温もりがあります',
+    'artisan.back': '職人一覧に戻る',
+    'artisan.empty': '職人がいません',
+    'artisan.noCover': 'カバーなし',
+    'artisan.hasVideo': '▶ ビデオあり',
+    'artisan.video': 'ビデオ紹介',
+    'artisan.products': '関連商品',
 
     'about.contact': 'ご質問がございましたら、こちらまでご連絡ください',
   },

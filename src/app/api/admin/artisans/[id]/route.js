@@ -1,7 +1,7 @@
 import { readJSON, writeJSON } from '@/lib/store'
 import { verifyPassword } from '@/lib/auth'
 
-const ALLOWED = ['name', 'nameZh', 'nameJa', 'sort']
+const ALLOWED = ['name', 'nameEn', 'nameJa', 'title', 'titleEn', 'titleJa', 'avatar', 'coverImage', 'bio', 'bioEn', 'bioJa', 'videoUrl', 'productIds', 'sort']
 
 export async function GET(request, { params }) {
   const token = request.headers.get('authorization')?.replace('Bearer ', '')
@@ -10,10 +10,10 @@ export async function GET(request, { params }) {
   }
 
   const { id } = await params
-  const categories = await readJSON('categories.json')
-  const category = categories.find((c) => c.id === id)
-  if (!category) return Response.json({ error: '分类不存在' }, { status: 404 })
-  return Response.json(category)
+  const artisans = await readJSON('artisans.json')
+  const artisan = artisans.find((a) => a.id === id)
+  if (!artisan) return Response.json({ error: '匠人不存在' }, { status: 404 })
+  return Response.json(artisan)
 }
 
 export async function PATCH(request, { params }) {
@@ -24,19 +24,19 @@ export async function PATCH(request, { params }) {
 
   const { id } = await params
   const updates = await request.json()
-  const categories = await readJSON('categories.json')
-  const idx = categories.findIndex((c) => c.id === id)
+  const artisans = await readJSON('artisans.json')
+  const idx = artisans.findIndex((a) => a.id === id)
 
   if (idx === -1) {
-    return Response.json({ error: '分类不存在' }, { status: 404 })
+    return Response.json({ error: '匠人不存在' }, { status: 404 })
   }
 
   for (const key of ALLOWED) {
-    if (key in updates) categories[idx][key] = updates[key]
+    if (key in updates) artisans[idx][key] = updates[key]
   }
 
-  await writeJSON('categories.json', categories)
-  return Response.json(categories[idx])
+  await writeJSON('artisans.json', artisans)
+  return Response.json(artisans[idx])
 }
 
 export async function DELETE(request, { params }) {
@@ -46,14 +46,14 @@ export async function DELETE(request, { params }) {
   }
 
   const { id } = await params
-  const categories = await readJSON('categories.json')
-  const idx = categories.findIndex((c) => c.id === id)
+  const artisans = await readJSON('artisans.json')
+  const idx = artisans.findIndex((a) => a.id === id)
 
   if (idx === -1) {
-    return Response.json({ error: '分类不存在' }, { status: 404 })
+    return Response.json({ error: '匠人不存在' }, { status: 404 })
   }
 
-  categories.splice(idx, 1)
-  await writeJSON('categories.json', categories)
+  artisans.splice(idx, 1)
+  await writeJSON('artisans.json', artisans)
   return Response.json({ success: true })
 }

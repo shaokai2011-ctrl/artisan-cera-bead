@@ -36,6 +36,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# claude
+.claude/
+
+# auto-generated cache
+src/data/geo_cache.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

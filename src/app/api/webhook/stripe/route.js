@@ -2,45 +2,78 @@ import { readJSON, writeJSON } from '@/lib/store'
 
 export async function POST(request) {
   try {
-    const body = await request.json()
-
-    // Verify Stripe webhook signature
     const sig = request.headers.get('stripe-signature')
     if (!sig) {
-      return Response.json({ error: 'Missing signature' }, { status: 400 })
+      return Response.json({ error: 'Missing stripe-signature' }, { status: 400 })
     }
 
+    const rawBody = await request.text()
+
+    const { getStripe } = await import('@/lib/stripe')
+    const stripe = getStripe()
+    const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET
+
     let event
-    try {
-      const stripe = (await import('@/lib/stripe')).getStripe()
-      const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET
-      if (webhookSecret) {
-        event = stripe.webhooks.constructEvent(body, sig, webhookSecret)
-      } else {
-        // Skip verification if no webhook secret configured (dev mode)
-        event = body
-      }
-    } catch (err) {
-      console.error('Webhook signature verification failed:', err.message)
-      return Response.json({ error: 'Invalid signature' }, { status: 400 })
+    if (webhookSecret) {
+      event = stripe.webhooks.constructEvent(rawBody, sig, webhookSecret)
+    } else {
+      event = JSON.parse(rawBody)
     }
 
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object
 
-      const order = {
-        id: session.id,
-        customerEmail: session.customer_details?.email || '',
-        customerName: session.customer_details?.name || '',
-        total: session.amount_total || 0,
-        currency: session.currency || 'usd',
-        status: session.payment_status || 'paid',
-        items: session.line_items || [],
-        shipping: session.shipping_details || {},
-        createdAt: new Date().toISOString(),
+      // Fetch expanded data if not included
+      let lineItems = session.line_items?.data || []
+      let paymentIntent = session.payment_intent
+      if (lineItems.length === 0 || !paymentIntent) {
+        const expanded = await stripe.checkout.sessions.retrieve(session.id, {
+          expand: ['line_items', 'payment_intent'],
+        })
+        if (lineItems.length === 0) lineItems = expanded.line_items?.data || []
+        if (!paymentIntent) paymentIntent = expanded.payment_intent
       }
 
-      // Append order to orders.json
+      const address = session.shipping_details?.address || {}
+      const order = {
+        id: session.id,
+        orderNumber: (session.created || Math.floor(Date.now() / 1000)).toString(),
+
+        customerName: session.customer_details?.name || '',
+        customerEmail: session.customer_details?.email || '',
+        customerPhone: session.customer_details?.phone || '',
+
+        shippingAddress: {
+          line1: address.line1 || '',
+          line2: address.line2 || '',
+          city: address.city || '',
+          state: address.state || '',
+          postal_code: address.postal_code || '',
+          country: address.country || '',
+        },
+
+        items: lineItems.map((li) => ({
+          productId: li.price?.product || '',
+          name: li.description || '',
+          quantity: li.quantity || 0,
+          unitAmount: li.price?.unit_amount || 0,
+          totalAmount: li.amount_total || 0,
+        })),
+
+        subtotal: session.amount_subtotal || 0,
+        total: session.amount_total || 0,
+        currency: session.currency || 'usd',
+        shippingCost: session.shipping_cost?.amount_total || 0,
+
+        paymentStatus: session.payment_status || 'paid',
+        fulfillmentStatus: 'pending',
+        paidAt: paymentIntent?.status === 'succeeded'
+          ? new Date(paymentIntent.created * 1000).toISOString()
+          : new Date().toISOString(),
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      }
+
       let orders = []
       try {
         orders = await readJSON('orders.json')
@@ -54,6 +87,6 @@ export async function POST(request) {
     return Response.json({ received: true })
   } catch (err) {
     console.error('Webhook error:', err)
-    return Response.json({ error: 'Internal error' }, { status: 500 })
+    return Response.json({ error: err.message }, { status: 500 })
   }
 }

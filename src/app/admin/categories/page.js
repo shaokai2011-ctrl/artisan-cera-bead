@@ -85,12 +85,17 @@ export default function AdminCategoriesPage() {
           <tbody>
             {categories.map((c) => (
               <tr key={c.id} className="border-b border-stone-100">
-                <td className="py-3 pr-4 text-stone-500 font-mono text-xs">{c.id}</td>
+                <td className="py-3 pr-4">
+                  <a href={`/admin/categories/${c.id}`} className="text-stone-500 font-mono text-xs hover:text-stone-900 underline">
+                    {c.id}
+                  </a>
+                </td>
                 <td className="py-3 pr-4 text-stone-900">{c.name}</td>
                 <td className="py-3 pr-4 text-stone-600">{c.nameZh}</td>
                 <td className="py-3 pr-4 text-stone-600">{c.nameJa}</td>
                 <td className="py-3 pr-4 text-stone-500">{c.sort}</td>
-                <td className="py-3">
+                <td className="py-3 flex gap-2">
+                  <a href={`/admin/categories/${c.id}`} className="text-xs text-stone-500 hover:text-stone-900 underline">编辑</a>
                   <button onClick={() => handleDelete(c.id)} className="text-xs text-red-400 hover:text-red-600">删除</button>
                 </td>
               </tr>
