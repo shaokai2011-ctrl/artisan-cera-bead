@@ -17,11 +17,16 @@ export async function PATCH(request, { params }) {
   }
 
   // Only allow updating specific fields
-  const allowed = ['price', 'stock', 'featured', 'active', 'name', 'nameZh', 'nameJa', 'description', 'descriptionZh', 'descriptionJa', 'coverImage', 'details', 'detailsZh', 'detailsJa']
+  const allowed = ['price', 'stock', 'featured', 'active', 'name', 'nameZh', 'nameJa', 'description', 'descriptionZh', 'descriptionJa', 'coverImage', 'details', 'detailsZh', 'detailsJa', 'images', 'length', 'materials']
   for (const key of allowed) {
     if (key in updates) {
       products[idx][key] = updates[key]
     }
+  }
+
+  // Auto-set coverImage to first image when images array changes
+  if ('images' in updates && products[idx].images?.length > 0) {
+    products[idx].coverImage = products[idx].images[0]
   }
 
   await writeJSON('products.json', products)
