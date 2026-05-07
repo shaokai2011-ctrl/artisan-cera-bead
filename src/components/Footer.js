@@ -27,7 +27,7 @@ export default function Footer() {
         <div>
           <h4 className="text-sm font-medium text-stone-900 mb-3">{t('footer.contact')}</h4>
           <div className="flex flex-col gap-2 text-sm text-stone-500">
-            <span>hello@artisancerabeadd.com</span>
+            <span>shaokai2011@gmail.com</span>
           </div>
         </div>
       </div>

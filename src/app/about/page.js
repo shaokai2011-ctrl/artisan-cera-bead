@@ -84,7 +84,7 @@ export default function AboutPage() {
       <div className="mt-12 md:mt-16 pt-6 md:pt-8 border-t border-stone-200 text-center">
         <p className="text-sm text-stone-500">
           {t('about.contact')}{' '}
-          <span className="text-stone-900">hello@artisancerabeadd.com</span>
+          <span className="text-stone-900">shaokai2011@gmail.com</span>
         </p>
       </div>
     </div>
