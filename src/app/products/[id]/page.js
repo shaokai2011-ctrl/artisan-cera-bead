@@ -21,6 +21,7 @@ export default function ProductPage() {
 
   const altName = lang === 'ja' ? product.nameJa : product.nameZh
   const altDesc = lang === 'ja' ? product.descriptionJa : product.descriptionZh
+  const prodDetails = lang === 'ja' ? (product.detailsJa || product.details) : lang === 'zh' ? (product.detailsZh || product.details) : product.details
 
   const images = product.images || []
 
@@ -84,6 +85,31 @@ export default function ProductPage() {
           <AddToCartButton product={product} />
         </div>
       </div>
+
+      {/* Product Details */}
+      {prodDetails && (
+        <section className="mt-12 md:mt-16 max-w-3xl mx-auto border-t border-stone-200 pt-8 md:pt-12">
+          <h2 className="text-lg md:text-xl font-serif text-stone-900 mb-4 md:mb-6">
+            {lang === 'ja' ? '商品詳細' : lang === 'zh' ? '商品详情' : 'Product Details'}
+          </h2>
+          <div className="text-sm md:text-base text-stone-600 leading-relaxed whitespace-pre-line">
+            {prodDetails}
+          </div>
+        </section>
+      )}
+
+      {/* Cover Image Banner */}
+      {product.coverImage && (
+        <div className="mt-8 md:mt-12 -mx-4 md:-mx-0 rounded-lg overflow-hidden">
+          <Image
+            src={product.coverImage}
+            alt={product.name}
+            width={1200}
+            height={600}
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      )}
     </div>
   )
 }

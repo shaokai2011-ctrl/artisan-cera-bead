@@ -23,7 +23,11 @@
     "length": "7.5 inches (19cm)",
     "stock": 10,
     "featured": true,
-    "active": true
+    "active": true,
+    "coverImage": "/images/celestial-blue-1.jpg",
+    "details": "Each bead is individually wheel-thrown and hand-painted with a starry glaze that shimmers in natural light.\n\n• 1280°C high-fired ceramic\n• Sterling silver accent bead\n• Adjustable elastic cord\n• Handcrafted in Jingdezhen, China\n• Comes in a branded gift box",
+    "detailsZh": "每颗珠子均为独立手工拉坯成型，手绘星彩釉面，在自然光下微微闪烁。\n\n• 1280°C 高温烧制陶瓷\n• 纯银点缀珠\n• 可调节弹力绳\n• 源自景德镇，手工制作\n• 附赠品牌礼盒包装",
+    "detailsJa": "一粒ずつ手挽き成形され、星空を思わせる釉薬で手描きされた珠。自然光の下で微かに輝きます。\n\n• 1280°C 高温焼成陶瓷\n• スターリングシルバーアクセント\n• 調節可能な伸縮コード\n• 中国・景徳鎮の手仕事\n• ブランドギフトボックス付き"
   },
   {
     "id": "earthy-terracotta-bracelet",
@@ -48,7 +52,11 @@
     "length": "7.5 inches (19cm)",
     "stock": 15,
     "featured": true,
-    "active": true
+    "active": true,
+    "coverImage": "/images/earthy-terracotta-1.jpg",
+    "details": "Warm, organic texture from unglazed terracotta clay, paired with a natural wooden accent bead.\n\n• Low-fired for a matte, porous finish\n• Waxed cotton cord with sliding knot\n• Wooden bead accent\n• Each piece develops a unique patina over time\n• Handcrafted in Jingdezhen, China",
+    "detailsZh": "未上釉的赤陶土带来温暖有机的质感，搭配天然木质点缀珠。\n\n• 低温烧制，哑光多孔质感\n• 蜡棉绳配滑动结\n• 木质点缀珠\n• 随佩戴时间形成独特光泽\n• 源自景德镇，手工制作",
+    "detailsJa": "釉薬をかけていないテラコッタの温かみのある有機的な質感。天然木のアクセントビーズと組み合わせ。\n\n• 低温焼成、マットな多孔質仕上げ\n• 蝋引き綿コード、スライディングノット\n• 木製アクセントビーズ\n• 経年変化で独自の風合いが増す\n• 中国・景徳鎮の手仕事"
   },
   {
     "id": "jade-whisper-bracelet",
@@ -73,7 +81,11 @@
     "length": "7 inches (18cm)",
     "stock": 8,
     "featured": true,
-    "active": true
+    "active": true,
+    "coverImage": "/images/jade-whisper-1.jpg",
+    "details": "Inspired by the translucency of jade, these glossy beads are layered with multiple thin glazes for depth.\n\n• 1280°C high-fired porcelain\n• 14k gold-plated charm\n• Silk cord with adjustable knot\n• Glossy jade-green finish\n• Handcrafted in Jingdezhen, China",
+    "detailsZh": "灵感来自翡翠的半透明质感，多层薄釉叠加出深邃光泽。\n\n• 1280°C 高温烧制瓷器\n• 14K 镀金吊坠\n• 真丝绳配可调节结\n• 光泽翠绿色釉面\n• 源自景德镇，手工制作",
+    "detailsJa": "ヒスイの半透明感に着想を得た、光沢のあるビーズ。複数の薄い釉薬の層が深みを生み出します。\n\n• 1280°C 高温焼成磁器\n• 14K ゴールドメッキチャーム\n• 調節可能な絹コード\n• 光沢のある翡翠グリーン\n• 中国・景徳鎮の手仕事"
   },
   {
     "id": "midnight-galaxy-bracelet",
@@ -98,7 +110,11 @@
     "length": "8 inches (20cm)",
     "stock": 12,
     "featured": false,
-    "active": true
+    "active": true,
+    "coverImage": "/images/midnight-galaxy-1.jpg",
+    "details": "Deep navy ceramic beads infused with real metallic flecks. Each bead catches light differently, like stars in space.\n\n• 1280°C high-fired ceramic\n• Stainless steel wire with magnetic clasp\n• Metallic-infused glaze\n• Slight variations make each piece unique\n• Handcrafted in Jingdezhen, China",
+    "detailsZh": "深蓝色陶瓷珠融入真实金属微粒，每颗珠子在不同光线下呈现不同的星光效果。\n\n• 1280°C 高温烧制陶瓷\n• 不锈钢丝配磁扣\n• 金属微粒釉面\n• 每件都有细微差异，独一无二\n• 源自景德镇，手工制作",
+    "detailsJa": "実際の金属粒子を混ぜ込んだ深いネイビーのセラミックビーズ。一粒一粒が光を異なる角度で捉えます。\n\n• 1280°C 高温焼成陶瓷\n• ステンレスワイヤー、マグネット留め\n• 金属粒子入り釉薬\n• 一点一点微妙に異なる個性\n• 中国・景徳鎮の手仕事"
   },
   {
     "id": "sunset-blush-bracelet",
@@ -123,7 +139,11 @@
     "length": "7.5 inches (19cm)",
     "stock": 10,
     "featured": false,
-    "active": true
+    "active": true,
+    "coverImage": "/images/sunset-blush-1.jpg",
+    "details": "A hand-painted gradient from soft blush pink to warm sunset orange. No two beads are exactly alike.\n\n• 1280°C high-fired ceramic\n• Rose gold bead cap\n• Elastic cord\n• Hand-painted gradient glaze\n• Handcrafted in Jingdezhen, China",
+    "detailsZh": "手绘渐变色彩，从柔粉到暖橙。每颗珠子的渐变色都是独一无二的。\n\n• 1280°C 高温烧制陶瓷\n• 玫瑰金珠帽\n• 弹力绳\n• 手绘渐变釉面\n• 源自景德镇，手工制作",
+    "detailsJa": "柔らかなピンクから温かなオレンジへの手描きグラデーション。同じ色合いは二つとありません。\n\n• 1280°C 高温焼成陶瓷\n• ローズゴールドビーズキャップ\n• 伸縮コード\n• 手描きグラデーション釉薬\n• 中国・景徳鎮の手仕事"
   },
   {
     "id": "ocean-deep-bracelet",
@@ -148,7 +168,11 @@
     "length": "7.5 inches (19cm)",
     "stock": 7,
     "featured": false,
-    "active": true
+    "active": true,
+    "coverImage": "/images/ocean-deep-1.jpg",
+    "details": "Textured deep teal beads that mimic the surface of ocean water, with a subtle wave ripple pattern.\n\n• 1280°C high-fired ceramic\n• Leather cord with silver toggle clasp\n• Rippled texture finish\n• Matte glaze with subtle sheen\n• Handcrafted in Jingdezhen, China",
+    "detailsZh": "深蓝绿色纹理珠，模拟海面波纹，表面带有微妙的波浪纹理。\n\n• 1280°C 高温烧制陶瓷\n• 皮绳配银色弹簧扣\n• 波纹纹理表面\n• 哑光釉面带微妙光泽\n• 源自景德镇，手工制作",
+    "detailsJa": "海面を模した波紋テクスチャーの深いティールビーズ。\n\n• 1280°C 高温焼成陶瓷\n• レザーコード、シルバートグル留め\n• 波紋テクスチャー\n• 微かな光沢のあるマット釉薬\n• 中国・景徳鎮の手仕事"
   },
   {
     "id": "sakura-petal-bracelet",
@@ -174,7 +198,11 @@
     "length": "7 inches (18cm)",
     "stock": 6,
     "featured": true,
-    "active": true
+    "active": true,
+    "coverImage": "/images/sakura-petal-1.jpg",
+    "details": "Delicate porcelain beads shaped and painted to resemble cherry blossom petals. A celebration of spring.\n\n• High-fired translucent porcelain\n• Pink silk cord with gold-filled spacers\n• Petal-shaped beads\n• Soft pink gradient glaze\n• Handcrafted in Jingdezhen, China",
+    "detailsZh": "精致瓷器珠，塑形并手绘成樱花花瓣形状。对春天的礼赞。\n\n• 高温烧制半透明瓷器\n• 粉色真丝绳配包金隔珠\n• 花瓣形珠\n• 柔粉渐变釉面\n• 源自景德镇，手工制作",
+    "detailsJa": "桜の花びらをかたどった繊細な磁器ビーズ。春を祝う一品。\n\n• 高温焼成半透明磁器\n• ピンク絹コード、ゴールドフィルドスペーサー\n• 花びら型ビーズ\n• 柔らかなピンクグラデーション釉薬\n• 中国・景徳鎮の手仕事"
   },
   {
     "id": "monochrome-minimal-bracelet",
@@ -198,6 +226,10 @@
     "length": "7.5 inches (19cm)",
     "stock": 20,
     "featured": false,
-    "active": true
+    "active": true,
+    "coverImage": "/images/monochrome-minimal-1.jpg",
+    "details": "Clean geometric black and white beads with a modern, architectural feel. Perfect for everyday wear.\n\n• 1280°C high-fired ceramic\n• Nylon cord with stainless steel clasp\n• Hand-painted geometric pattern\n• Matte finish\n• Handcrafted in Jingdezhen, China",
+    "detailsZh": "简洁的黑白几何珠，具有现代建筑感。适合日常佩戴的百搭之选。\n\n• 1280°C 高温烧制陶瓷\n• 尼龙绳配不锈钢扣\n• 手绘几何图案\n• 哑光质感\n• 源自景德镇，手工制作",
+    "detailsJa": "モダンな建築物を思わせる、シャープな白黒の幾何学ビーズ。毎日の装いに最適。\n\n• 1280°C 高温焼成陶瓷\n• ナイロンコード、ステンレス留め\n• 手描き幾何学模様\n• マット仕上げ\n• 中国・景徳鎮の手仕事"
   }
 ]

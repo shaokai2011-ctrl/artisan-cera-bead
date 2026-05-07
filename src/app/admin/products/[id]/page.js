@@ -65,6 +65,15 @@ export default function AdminProductEditPage() {
         <Field label="描述 (中文)" value={product.descriptionZh} onChange={(v) => update('descriptionZh', v)} textarea />
         <Field label="描述 (日本語)" value={product.descriptionJa || ''} onChange={(v) => update('descriptionJa', v)} textarea />
 
+        <Field label="封面图片" value={product.coverImage || ''} onChange={(v) => update('coverImage', v)} />
+        {product.coverImage && (
+          <img src={product.coverImage} alt="cover" className="w-40 h-40 object-cover rounded border border-stone-200" />
+        )}
+
+        <Field label="详细描述 (EN)" value={product.details || ''} onChange={(v) => update('details', v)} textarea />
+        <Field label="详细描述 (中文)" value={product.detailsZh || ''} onChange={(v) => update('detailsZh', v)} textarea />
+        <Field label="详细描述 (日本語)" value={product.detailsJa || ''} onChange={(v) => update('detailsJa', v)} textarea />
+
         <div className="grid grid-cols-2 gap-4">
           <Field label="价格 (美分)" value={product.price} onChange={(v) => update('price', parseInt(v) || 0)} type="number" />
           <Field label="库存" value={product.stock} onChange={(v) => update('stock', parseInt(v) || 0)} type="number" />

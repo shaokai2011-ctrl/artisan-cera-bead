@@ -10,7 +10,7 @@ function formatPrice(cents) {
 
 export default function ProductCard({ product }) {
   const { t, lang } = useLang()
-  const mainImage = product.images?.[0]
+  const mainImage = product.coverImage || product.images?.[0]
   const altName = lang === 'ja' ? product.nameJa : product.nameZh
 
   return (
