@@ -17,7 +17,7 @@ export async function PATCH(request, { params }) {
   }
 
   // Only allow updating specific fields
-  const allowed = ['price', 'stock', 'featured', 'active', 'name', 'nameZh', 'nameJa', 'description', 'descriptionZh', 'descriptionJa', 'coverImage', 'details', 'detailsZh', 'detailsJa', 'images', 'length', 'materials']
+  const allowed = ['price', 'stock', 'featured', 'active', 'name', 'nameZh', 'nameJa', 'description', 'descriptionZh', 'descriptionJa', 'coverImage', 'details', 'detailsZh', 'detailsJa', 'images', 'length', 'materials', 'category', 'sales']
   for (const key of allowed) {
     if (key in updates) {
       products[idx][key] = updates[key]

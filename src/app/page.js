@@ -4,11 +4,23 @@ import Image from 'next/image'
 import { getAllProducts, getFeaturedProducts } from '@/lib/products'
 import { useLang } from '@/context/LanguageContext'
 import ProductCard from '@/components/ProductCard'
+import categories from '@/data/categories.json'
+import { useState } from 'react'
 
 export default function HomePage() {
-  const { t } = useLang()
+  const { t, lang } = useLang()
+  const [activeCat, setActiveCat] = useState('all')
+
   const featured = getFeaturedProducts()
   const all = getAllProducts()
+
+  const filtered = activeCat === 'all'
+    ? all
+    : all.filter((p) => p.category === activeCat)
+
+  function catName(c) {
+    return lang === 'ja' ? c.nameJa : lang === 'zh' ? c.nameZh : c.name
+  }
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 md:py-12">
@@ -54,8 +66,36 @@ export default function HomePage() {
       {/* All Products */}
       <section>
         <h2 className="text-lg md:text-xl font-serif text-stone-900 mb-4 md:mb-6">{t('home.all')}</h2>
+
+        {/* Category Filter */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          <button
+            onClick={() => setActiveCat('all')}
+            className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
+              activeCat === 'all'
+                ? 'bg-stone-900 text-white border-stone-900'
+                : 'border-stone-300 text-stone-500 hover:border-stone-900'
+            }`}
+          >
+            {lang === 'ja' ? 'すべて' : lang === 'zh' ? '全部' : 'All'}
+          </button>
+          {categories.map((c) => (
+            <button
+              key={c.id}
+              onClick={() => setActiveCat(c.id)}
+              className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
+                activeCat === c.id
+                  ? 'bg-stone-900 text-white border-stone-900'
+                  : 'border-stone-300 text-stone-500 hover:border-stone-900'
+              }`}
+            >
+              {catName(c)}
+            </button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
-          {all.map((product) => (
+          {filtered.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

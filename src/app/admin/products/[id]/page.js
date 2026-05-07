@@ -10,6 +10,7 @@ export default function AdminProductEditPage() {
   const fileInputRef = useRef(null)
 
   const [product, setProduct] = useState(null)
+  const [categories, setCategories] = useState([])
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
@@ -17,13 +18,15 @@ export default function AdminProductEditPage() {
 
   useEffect(() => {
     async function load() {
-      const res = await fetch('/api/admin/products', {
-        headers: { Authorization: `Bearer ${token}` },
-      })
-      if (res.status === 401) return router.push('/admin/login')
-      const all = await res.json()
+      const [pRes, cRes] = await Promise.all([
+        fetch('/api/admin/products', { headers: { Authorization: `Bearer ${token}` } }),
+        fetch('/api/admin/categories', { headers: { Authorization: `Bearer ${token}` } }),
+      ])
+      if (pRes.status === 401) return router.push('/admin/login')
+      const all = await pRes.json()
       const p = all.find((x) => x.id === id)
       if (p) setProduct({ ...p })
+      setCategories(await cRes.json())
       setLoading(false)
     }
     load()
@@ -180,9 +183,24 @@ export default function AdminProductEditPage() {
         <Field label="详细描述 (中文)" value={product.detailsZh || ''} onChange={(v) => update('detailsZh', v)} textarea />
         <Field label="详细描述 (日本語)" value={product.detailsJa || ''} onChange={(v) => update('detailsJa', v)} textarea />
 
-        <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className="block text-xs text-stone-500 mb-1">分类</label>
+          <select
+            value={product.category || ''}
+            onChange={(e) => update('category', e.target.value)}
+            className="w-full px-3 py-2 border border-stone-300 rounded text-sm focus:outline-none focus:border-stone-900"
+          >
+            <option value="">无分类</option>
+            {categories.map((c) => (
+              <option key={c.id} value={c.id}>{c.nameZh || c.name} ({c.id})</option>
+            ))}
+          </select>
+        </div>
+
+        <div className="grid grid-cols-3 gap-4">
           <Field label="价格 (美分)" value={product.price} onChange={(v) => update('price', parseInt(v) || 0)} type="number" />
           <Field label="库存" value={product.stock} onChange={(v) => update('stock', parseInt(v) || 0)} type="number" />
+          <Field label="销量" value={product.sales || 0} onChange={(v) => update('sales', parseInt(v) || 0)} type="number" />
         </div>
 
         <div className="flex gap-6 pt-2">

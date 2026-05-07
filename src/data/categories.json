@@ -1,0 +1,30 @@
+[
+  {
+    "id": "celestial",
+    "name": "Celestial",
+    "nameZh": "天象系列",
+    "nameJa": "天体コレクション",
+    "sort": 1
+  },
+  {
+    "id": "earth",
+    "name": "Earth",
+    "nameZh": "大地系列",
+    "nameJa": "大地コレクション",
+    "sort": 2
+  },
+  {
+    "id": "botanical",
+    "name": "Botanical",
+    "nameZh": "植物系列",
+    "nameJa": "植物コレクション",
+    "sort": 3
+  },
+  {
+    "id": "modern",
+    "name": "Modern",
+    "nameZh": "现代系列",
+    "nameJa": "モダンコレクション",
+    "sort": 4
+  }
+]

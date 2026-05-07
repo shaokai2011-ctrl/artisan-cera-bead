@@ -31,6 +31,7 @@ export default function AdminLayout({ children }) {
           <a href="/admin" className="text-lg font-serif text-stone-900">后台管理</a>
           <div className="flex items-center gap-4 text-sm text-stone-500">
             <a href="/admin/products" className="hover:text-stone-900">商品管理</a>
+            <a href="/admin/categories" className="hover:text-stone-900">分类管理</a>
             <a href="/admin/orders" className="hover:text-stone-900">订单管理</a>
             <a href="/" className="hover:text-stone-900" target="_blank">前台</a>
             <button
