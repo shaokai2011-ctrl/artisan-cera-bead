@@ -2,9 +2,11 @@
 
 import Image from 'next/image'
 import { useLang } from '@/context/LanguageContext'
+import { useState } from 'react'
 
 export default function Footer() {
   const { t } = useLang()
+  const [showTikTok, setShowTikTok] = useState(false)
 
   return (
     <footer className="border-t border-stone-200 bg-stone-50 mt-auto">
@@ -28,15 +30,25 @@ export default function Footer() {
           <h4 className="text-sm font-medium text-stone-900 mb-3">{t('footer.contact')}</h4>
           <div className="flex flex-col gap-2 text-sm text-stone-500">
             <span>shaokai2011@gmail.com</span>
-            <a
-              href="https://tiktok.com/@shaokai2011"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-stone-900 transition-colors"
+            <button
+              onClick={() => setShowTikTok(!showTikTok)}
+              className="flex items-center gap-2 hover:text-stone-900 transition-colors text-left"
             >
               <Image src="/images/tiktok-qr.jpg" alt="TikTok" width={20} height={20} className="rounded" />
-              @shaokai2011
-            </a>
+              @houlixie985
+            </button>
+            {showTikTok && (
+              <div className="mt-2">
+                <Image
+                  src="/images/tiktok-qr.jpg"
+                  alt="TikTok QR Code - @houlixie985"
+                  width={200}
+                  height={200}
+                  className="rounded-lg border border-stone-200"
+                />
+                <p className="text-xs text-stone-400 mt-1">TikTok: @houlixie985</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
